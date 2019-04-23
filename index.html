@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="The Official Website"/>
+    <meta name="keywords" content="sam caparros, sam, caparros, thesamcaparros, thesamcaparros.com, caparrós"/>
+    <meta name="author" content="SAM CAPARRÓS"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#ff2300"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ff2300"/>
+    <meta http-equiv="refresh" content="3600"/>
+    <title>The SAM CAPARRÓS™ | The Official Website!</title>
+    <link rel="stylesheet" type="text/css" href="./style/styles.css"/>
+    <link rel="icon" href="./img/favicon.png" sizes="16x16 32x32" type="image/png"/>
+  </head>
+  <body>
+    <section id="load">
+      <div id="spinner"></div>
+    </section>
+    <section id="container">
+      <section id="header">
+        <section id="nav-bar">
+          <a href="#" id="logo">SAM CAPARRÓS</a>
+          <nav>
+            <ul>
+              <li onclick="closeNav()"><a href="#about">ABOUT ME</a></li>
+              <li onclick="closeNav()"><a href="#contact">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div id="toggle" onclick="openNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </section>
+      </section>
+      <a href="#" id="top">BACK TO TOP!</a>
+      <section id="home" class="sector" onclick="closeNav()">
+        <h1>COMING SOON!</h1>
+      </section>
+      <section id="about" class="sector" onclick="closeNav()">
+        <section class="content">
+          <h3>ABOUT ME</h3>
+          <p>Hi! My name is Sam Caparrós. I'm an enthusiastic student of computer science. My favorite fields are free operating systems and web design. I love cycling and I practice it regularly, it's one of my passion. I started thanks to a person to whom I keep a great personal esteem. Thanks to her, to this day I can say that cycling saved my life!</p>
+        </section>
+      </section>
+      <section id="footer" onclick="closeNav()">
+        <div>
+          <span id="url"><a href="#">THESAMCAPARROS.COM</a></span>
+          <span id="copy">2019 © SAM CAPARRÓS | SOME RIGHTS RESERVED | <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU/GPL v3.0</a></span>
+        </div>
+      </section>
+    </section>
+    <section id="sidenav">
+      <div id="close" onclick="closeNav()">
+        <span id="stick"></span>
+        <span id="stick2"></span>
+      </div>
+      <nav>
+        <ul>
+          <li onclick="closeNav()"><a href="#about">ABOUT ME</a></li>
+          <li onclick="closeNav()"><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </section>
+    <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById("load").style.visibility = "hidden";
+        document.getElementById("load").style.opacity = "0";
+        document.getElementById("container").style.display = "block";
+      }
+
+      window.onscroll = function() {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 2) {
+          document.getElementById("top").style.opacity = "1";
+          document.getElementById("nav-bar").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+        } else {
+          document.getElementById("top").style.opacity = "0";
+          document.getElementById("nav-bar").style.backgroundColor = "rgba(0, 0, 0, 0)";
+        }
+      }
+
+      function openNav() {
+        document.getElementById("container").style.marginLeft = "-320px";
+        document.getElementById("container").style.opacity = "0.50";
+        document.getElementById("sidenav").style.right = "0px";
+        document.getElementById("sidenav").style.boxShadow = "0px 0px 3px 0px rgba(0, 0, 0, 0.5)";
+        document.getElementById("header").style.opacity = "0";
+        document.getElementById("top").style.display = "none";
+      }
+
+      function closeNav() {
+        document.getElementById("container").style.marginLeft = "0px";
+        document.getElementById("container").style.opacity = "1";
+        document.getElementById("sidenav").style.right = "-320px";
+        document.getElementById("sidenav").style.boxShadow = "none";
+        document.getElementById("header").style.opacity = "1";
+        document.getElementById("top").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
