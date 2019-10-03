@@ -1,2 +1,2 @@
-# The SAM CAPARRÓS™
-The SAM CAPARRÓS™ | The Official Website!
+# The SAM CAPARRÓS
+The SAM CAPARRÓS | The Original Website!
